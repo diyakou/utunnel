@@ -7,13 +7,13 @@ ARCH=$(uname -m)
 case $ARCH in
     "x86_64")
     
-        URL="https://github.com/diyakou/utunnel/releases/download/V1.1.2/utunnelmanageramd64"
+        URL="https://github.com/diyakou/utunnel/releases/download/release1/utunnelmanageramd64"
         ;;
     "aarch64" | "arm64")
-        URL="https://github.com/diyakou/utunnel/releases/download/V1.1.2/utunnelmanagerarm64"
+        URL="https://github.com/diyakou/utunnel/releases/download/release1/utunnelmanagerarm64"
         ;;
     "i386" | "i686")
-        URL="https://github.com/diyakou/utunnel/releases/download/V1.1.2/utunnelmanager386"
+        URL="https://github.com/diyakou/utunnel/releases/download/release1/utunnelmanager386"
         ;;
     *)
         echo "Unsupported architecture: $ARCH"
