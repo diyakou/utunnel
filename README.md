@@ -26,19 +26,19 @@
 ✅ یک تشکر ویژه برای آقای ایمان آقاپور از طریق لینک های زیر می توانید از اون حمایت کنید.
 
 آدرس کانال یوتیوب:
-http://youtube.com/@iaghapour
+http://youtube.com/webdops
 آدرس تلگرام :
-https://t.me/iaghapour
+https://t.me/kafkaspeed
 
 🔍 اگر اسکریپت مشکلی داشت می توانید از طریق آیدی زیر مشکلات رو بگید و رفع کنم : 
-https://t.me/SirTS
+https://t.me/exchi
 
 💻 راهنمای نصب و اجرا
 
 برای نصب این دستور را اجرا کنید
 
 ```
-bash <(curl -s https://raw.githubusercontent.com/OmidEbrahimii/utunnel/refs/heads/main/install_utunnel.sh --ipv4)
+bash <(curl -s https://raw.githubusercontent.com/diyakou/utunnel/refs/heads/main/install_utunnel.sh --ipv4)
 ```
 
 
