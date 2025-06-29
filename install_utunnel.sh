@@ -6,7 +6,6 @@ ARCH=$(uname -m)
 # Map architecture to download URL
 case $ARCH in
     "x86_64")
-    
         URL="https://github.com/diyakou/utunnel/releases/download/release1/utunnelmanageramd64"
         ;;
     "aarch64" | "arm64")
@@ -21,10 +20,19 @@ case $ARCH in
         ;;
 esac
 
-# Download the appropriate version
+# Download the appropriate version with progress indication
 echo "Downloading utunnel_manager for $ARCH..."
-wget -O utunnel_manager $URL || curl -o utunnel_manager $URL
 
+if command -v wget >/dev/null 2>&1; then
+    wget --progress=bar:force -O utunnel_manager "$URL"
+elif command -v curl >/dev/null 2>&1; then
+    curl -# -L -o utunnel_manager "$URL"
+else
+    echo "Neither wget nor curl is available for downloading."
+    exit 1
+fi
+
+# Check if download was successful
 if [ ! -f "utunnel_manager" ]; then
     echo "Failed to download utunnel_manager"
     exit 1
