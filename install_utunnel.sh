@@ -20,7 +20,7 @@ case $ARCH in
         ;;
 esac
 
-# Download the appropriate version with progress indication
+# Download the appropriate version with progress
 echo "Downloading utunnel_manager for $ARCH..."
 
 if command -v wget >/dev/null 2>&1; then
@@ -28,11 +28,11 @@ if command -v wget >/dev/null 2>&1; then
 elif command -v curl >/dev/null 2>&1; then
     curl -# -L -o utunnel_manager "$URL"
 else
-    echo "Neither wget nor curl is available for downloading."
+    echo "Error: Neither wget nor curl is installed."
     exit 1
 fi
 
-# Check if download was successful
+# Verify the binary was downloaded
 if [ ! -f "utunnel_manager" ]; then
     echo "Failed to download utunnel_manager"
     exit 1
@@ -41,6 +41,14 @@ fi
 # Make it executable
 chmod +x utunnel_manager
 
-# Run the manager
+# Print banner and start the manager
+clear
+cat <<'EOF'
+      +@@@@@.  :@@%  :@@  :@@:  @@ +@@  %@% +@@   @@#    #@%    #@%   %@#
+
+       **** ushkayanet utunnel Reverse tunnel management console  Edited by Kyan(Diyakou)  ****
+
+EOF
+
 echo "Starting utunnel_manager..."
 ./utunnel_manager
